@@ -1,0 +1,26 @@
+<div class="col-xs-12 col-md-6">
+<table class="table table-bordered table-striped table-responsive">
+		<tr>
+			<th>
+				Order ID
+			</th>
+			<th>
+				Email Id
+			</th>
+			<th>
+				Order Total
+			</th>
+		</tr>
+		<tr ng-repeat="order in orders">
+			<td>
+				{{order._id}}
+			</td>
+			<td>
+				{{order.cx_email}}
+			</td>
+			<td>
+				{{order.order_total}}
+			</td>
+		</tr>
+</table>
+</div>

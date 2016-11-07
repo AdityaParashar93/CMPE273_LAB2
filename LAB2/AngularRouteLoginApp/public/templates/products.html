@@ -1,0 +1,62 @@
+<div class="col-xs-12 col-md-6">
+<table class="table table-bordered table-striped table-responsive">
+		<tr>
+			<th>
+				Product ID
+			</th>
+			<th>
+				Product Name
+			</th>
+			<th>
+				Product Seller
+			</th>
+			<th>
+				Product Value
+			</th>
+			<th>
+				Number of Items
+			</th>
+			<th>
+				Product Description
+			</th>
+			<th>
+				Product Condition
+			</th>
+			<th>
+				Product Category
+			</th>
+			<th>
+				Add to Cart
+			</th>
+		</tr>
+		<tr ng-repeat="product in products">
+			<td>
+				{{product._id}}
+			</td>
+			<td>
+				{{product.product_name}}
+			</td>
+			<td>
+				{{product.product_seller}}
+			</td>
+			<td>
+				{{product.product_value}}
+			</td>
+			<td>
+				{{product.product_inventory}}
+			</td>
+			<td>
+				{{product.product_desc}}
+			</td>
+			<td>
+				{{product.product_condi}}
+			</td>
+			<td>
+				{{product.product_category}}
+			</td>
+			<td>
+				<input type="submit" class="btn btn-success" ng-click="addToCart(product._id);" value="Add to Cart" />
+			</td>
+		</tr>
+</table>
+</div>

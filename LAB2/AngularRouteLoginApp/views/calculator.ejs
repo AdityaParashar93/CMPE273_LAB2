@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<!-- Loading the AngularJS file from /public/angularJS folder -->
+<script src="angularjs/calculator.js"></script>
+</head>
+<body ng-app="calculator" ng-controller="calculator">
+	 <div class="row">
+		<div class="col-md-4">
+			<div class="row">
+				<div class="col-md-12" style="margin:10px;"> 
+					<p><input type="text" ng-model="num1"></p>
+					</div>
+  					<div class="col-md-12" style="margin:10px;">
+  					<p><input type="reset" class="btn btn-success" ng-click="tokenize01();" value="   1   " />
+  					<input type="submit" class="btn btn-success" ng-click="tokenize02();" value="   2   " />
+  					<input type="submit" class="btn btn-success" ng-click="tokenize03();" value="   3   " />
+  					<input type="submit" class="btn btn-success" ng-click="tokenize1();" value="   +   " /></div><br>
+  					<div class="col-md-12" style="margin:10px;">
+  					<input type="submit" class="btn btn-success" ng-click="tokenize04();" value="   4   " />
+  					<input type="submit" class="btn btn-success" ng-click="tokenize05();" value="   5   " />
+  					<input type="submit" class="btn btn-success" ng-click="tokenize06();" value="   6   " />
+     				<input type="reset" class="btn btn-success" ng-click="tokenize2();" value="   -   " /></div><br>
+     				<div class="col-md-12" style="margin:10px;">
+     				<input type="submit" class="btn btn-success" ng-click="tokenize07();" value="   7  " />
+     				<input type="submit" class="btn btn-success" ng-click="tokenize08();" value="   8   " />
+     				<input type="submit" class="btn btn-success" ng-click="tokenize09();" value="   9   " />
+     				<input type="reset" class="btn btn-success" ng-click="tokenize3();" value="   *   " /></div><br>
+     				<div class="col-md-12" style="margin:10px;">
+     				<input type="submit" class="btn btn-success" ng-click="tokenizeC();" value="   C   " />
+     				<input type="submit" class="btn btn-success" ng-click="tokenize00();" value="   0   " />
+     				<input type="submit" class="btn btn-success" ng-click="tokenize4();" value="   /   " />
+     				<input type="submit" class="btn btn-success" ng-click="submit();" value=" = " /></div></p><br><br>
+  					<p>{{result}}</p>
+  					<div class="alert alert-danger" ng-hide="divide_by_zero">
+					<strong>Divide By Zero Error : Can not perform Operation</source>
+					</div>	
+  				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

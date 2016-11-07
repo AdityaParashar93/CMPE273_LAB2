@@ -1,0 +1,69 @@
+<div class="col-xs-12 col-md-6">
+<table class="table table-bordered table-striped table-responsive">
+		<tr>
+			<th>
+				Product ID
+			</th>
+			<th>
+				Product Name
+			</th>
+			<th>
+				Product Seller
+			</th>
+			<th>
+				Product Value
+			</th>
+			<th>
+				Number of Items
+			</th>
+			<th>
+				Product Description
+			</th>
+			<th>
+				Product Condition
+			</th>
+			<th>
+				Product Category
+			</th>
+			<th>
+				Remove from Cart
+			</th>
+		</tr>
+		<tr ng-repeat="product in products">
+			<td>
+				{{product._id}}
+			</td>
+			<td>
+				{{product.product_name}}
+			</td>
+			<td>
+				{{product.product_seller}}
+			</td>
+			<td>
+				{{product.product_value}}
+			</td>
+			<td>
+				{{product.product_inventory}}
+			</td>
+			<td>
+				{{product.product_desc}}
+			</td>
+			<td>
+				{{product.product_condi}}
+			</td>
+			<td>
+				{{product.product_category}}
+			</td>
+			<td>
+				<input type="submit" class="btn btn-success" ng-click="removeFromCart(product._id);" value="Remove from Cart" />
+			</td>
+		</tr>
+</table>
+<div class="alert alert-success" ng-hide="show">
+<strong>Hey Hii your order total is {{cart_total}} USD</strong><br>
+</div>
+<input type="submit" class="btn btn-success" ng-click="checkout();" tabindex="7" value="Proceed to Check Out" />
+</div>
+
+
+	

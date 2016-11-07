@@ -1,0 +1,74 @@
+<div class="col-md-3">
+<table class="table table-bordered table-striped table-responsive">
+		<tr>
+			<th>
+				Product ID
+			</th>
+			<th>
+				Product Name
+			</th>
+			<th>
+				Product Seller
+			</th>
+			<th>
+				Latest Bid Value
+			</th>
+			<th>
+				Number of Items
+			</th>
+			<th>
+				Product Description
+			</th>
+			<th>
+				Product Condition
+			</th>
+			<th>
+				Product Category
+			</th>
+			<th>
+				Place your bid Value here
+			</th>
+			<th>
+				Place the Bid
+			</th>
+		</tr>
+		<tr ng-repeat="product in products">
+			<td>
+				{{product._id}}
+			</td>
+			<td>
+				{{product.product_name}}
+			</td>
+			<td>
+				{{product.product_seller}}
+			</td>
+			<td>
+				{{product.product_value}}
+			</td>
+			<td>
+				{{product.product_inventory}}
+			</td>
+			<td>
+				{{product.product_desc}}
+			</td>
+			<td>
+				{{product.product_condi}}
+			</td>
+			<td>
+				{{product.product_category}}
+			</td>
+			<td>
+			<input type="text" class="form-control input-lg" placeholder="Place your bid here" ng-model="bid_value">
+			</td>
+			<td>
+				<input type="submit" class="btn btn-success" ng-click="place_bid(product._id,bid_value,product.product_value);" value="Bid!Bid!Bid!!" />
+			</td>
+		</tr>
+</table>
+<div class="alert alert-danger" ng-hide="invalid_bid">
+	<strong>Could not place your bid...bidding is over now</strong>
+</div>
+<div class="alert alert-success" ng-hide="valid_bid">
+	<strong>Hey your bid is placed</strong>
+</div>
+</div>

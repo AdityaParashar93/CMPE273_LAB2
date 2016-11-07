@@ -1,0 +1,116 @@
+<div class="container horozontal-left" ng-controller="login">
+  <div class="row">
+   <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    <form class="form-horizontal">
+     <div class="form-group ">
+      <label class="control-label col-sm-2 requiredField" for="product_name">
+       Product Name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+       <input class="form-control" id="product_name" ng-model="product_name" placeholder="Enter Product Name" type="text"/>
+       <span class="help-block" id="hint_product_name">
+        Enter the product Name
+       </span>
+      </div>
+     </div>
+     <div class="form-group ">
+      <label class="control-label col-sm-2 requiredField" for="product_price">
+       Price
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+       <input class="form-control" id="product_price" ng-model="product_price" placeholder="Product Price" type="number"/>
+       <span class="help-block" id="hint_product_price">
+        Enter the product price
+       </span>
+      </div>
+     </div>
+     <div class="form-group ">
+      <label class="control-label col-sm-2 requiredField" for="product_quantity">
+       Quantity
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+       <input class="form-control" id="quantity" ng-model="product_quantity" placeholder="Enter Quantity" type="number"/>
+       <span class="help-block" id="hint_quantity">
+        Enter the number of products you wish to sell
+       </span>
+      </div>
+     </div>
+     <div class="form-group ">
+      <label class="control-label col-sm-2 requiredField" for="product_desc">
+       Description
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+       <input class="form-control" id="product_desc" ng-model="product_desc" placeholder="Product Description" type="text"/>
+       <span class="help-block" id="hint_product_desc">
+        Describe your product in 3-4 words
+       </span>
+      </div>
+     </div>
+     <div class="form-group ">
+      <label class="control-label col-sm-2 requiredField" for="product_condi">
+       Sell Type
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+       <select class="select form-control" id="product_condi" ng-model="product_condi">
+        <option value="new">
+         New
+        </option>
+        <option value="old_nb">
+         Fixed Price
+        </option>
+        <option value="old_b">
+         Allow users to bid
+        </option>
+       </select>
+       <span class="help-block" id="hint_product_condi">
+        Please select the type of the sell
+       </span>
+      </div>
+     </div>
+     <div class="form-group ">
+      <label class="control-label col-sm-2 requiredField" for="product_category">
+       Category
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+       <select class="select form-control" ng-model="product_category" ng-options="x for x in category_list">
+       </select>
+       <span class="help-block" id="hint_product_category">
+        Select the Category of your product
+       </span>
+      </div>
+     </div>
+     <div class="form-group">
+      <div class="col-xs-12 col-md-6">
+       <button class="btn btn-success btn-lg btn-block" name="submit" type="submit" ng-click="add_product();">
+        Submit
+       </button>
+      </div>
+       </div>
+      <div class="alert alert-danger" ng-hide="invalid_product">
+				<strong>Something wrong with product details.Please check details one more time or contact us by using link on top of the page.</strong>
+			</div>
+			<div class="alert alert-success" ng-hide="valid_product">
+				<strong>Hey your product is on market now.</strong>
+			</div>
+    </form>
+   </div>
+  </div>
+ </div>
